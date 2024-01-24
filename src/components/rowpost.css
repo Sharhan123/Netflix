@@ -1,0 +1,123 @@
+.row{
+    margin-top: .5rem;
+    margin-left: 20px;
+    color: #fff;
+}
+.title-post{
+    margin-top:2rem ;
+    margin-left: 1rem;
+}
+.post{
+    display: flex;
+    padding: 20px;
+    overflow-x:scroll;
+    overflow-y: hidden;
+    
+  }
+  .post::-webkit-scrollbar{
+    display: none;
+  }
+  .post-img-small{
+    margin-right:10px ;
+    max-height: 260px;
+  }
+  
+  .post-img{
+  max-height: 360px;
+    margin-right: 10px;
+  }
+  .post-img-container {
+    position: relative;
+    max-height: 360px;
+    margin-right: 10px;
+  }
+  
+  .post-img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Adjust the opacity as needed */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
+  
+  .post-img-container:hover::before {
+    opacity: 1; 
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    border: 0cap;
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
+  .play-button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(169, 0, 0);
+  }
+  
+  .post-img-container:hover .play-button {
+    opacity: 1; /* Show the play button on hover */
+  }
+  .image-title {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    max-height: 100px;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect */
+    width: auto;
+
+    
+  }
+  
+  .post-img-container:hover .image-title {
+    opacity: 1; /* Show the title on hover */
+  }
+
+  
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: hidden; /* Disable scrolling on the overlay itself */
+}
+
+.video-modal-content {
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
